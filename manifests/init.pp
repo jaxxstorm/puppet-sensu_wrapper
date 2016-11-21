@@ -1,4 +1,47 @@
-# Sets defaults
+# == Class: sensu_wrapper
+#
+# Installs, configures and manages sensu wrapper
+#
+# === Parameters
+#
+# [*version*]
+#   The version of the sensu-wrapper to deploy, see https://github.com/jaxxstorm/sensu-wrapper/releases
+#
+# [*archive_path*]
+#   Full path to store the tar gzip archive of the sensu wrapper, probably in /tmp/sensu-wrapper.tar.gz
+#
+# [*extract_path*]
+#   Where to extract the tar gzip archive
+#
+# [*bin_dir*]
+#   The bin directory to store the executable
+#
+# [*config_dir*]
+#   Where to setup the config for the sensu wrapper
+#
+# [*download_url_base*]
+#   The releases web URL for the github project sensu-wrapper
+#
+# [*download_url*]
+#   The URL to download the release past the $download_url_base
+#
+# [*os_arch*]
+#   The archictecture of the OS, either amd64 or 386
+#
+# === Examples
+#
+# @example
+#   class { '::sensu_wrapper':
+#     version           => 'v0.2',
+#     archive_path      => '/tmp/sensu-wrapper.tar.gz',
+#     extract_path      => '/opt/sensu-wrapper',
+#     bin_dir           => '/usr/local/bin',
+#     config_dir        => '/etc/sensu-wrapper.d',
+#     download_url_base => 'https://github.com/jaxxstorm/sensu-wrapper/releases/download/',
+#     download_url      => undef,
+#     os_arch           => 'amd64',
+#   }
+#
 class sensu_wrapper (
   $version              = $sensu_wrapper::params::version,
   $archive_path         = $sensu_wrapper::params::archive_path,
