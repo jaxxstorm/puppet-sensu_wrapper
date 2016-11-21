@@ -1,0 +1,12 @@
+# File managed by Puppet
+#
+# Set environment
+<% Array(@environment).join("\n").split(%r{\n}).each do |env_var|
+     if env_var.match(%r{\S+=\S+}) -%>
+<%= env_var %>
+<%   elsif env_var.match(%r{\S}) -%>
+## Possible input error: <%= env_var %>
+<%   end
+   end -%>
+# Job definition
+<%= @minute %> <%= @hour %> <%= @day_of_month %> <%= @month %> <%= @day_of_week %> <%= @user %><% if @lock -%>flock -n "/var/lock/<%= @title %>.lock"<% end %> <%= @command %>
