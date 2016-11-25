@@ -38,8 +38,6 @@
 #     bin_dir           => '/usr/local/bin',
 #     config_dir        => '/etc/sensu-wrapper.d',
 #     download_url_base => 'https://github.com/jaxxstorm/sensu-wrapper/releases/download/',
-#     download_url      => undef,
-#     os_arch           => 'amd64',
 #   }
 #
 class sensu_wrapper (
