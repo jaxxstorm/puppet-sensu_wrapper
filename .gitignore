@@ -1,4 +1,13 @@
+pkg/*
+spec/fixtures
+Gemfile.lock
+.vagrant/*
+.yardoc
+doc/**
 .bundle
-bundle
-vendor
-
+*.swp
+coverage/
+junit/
+log/
+vendor/
+.ruby-version
