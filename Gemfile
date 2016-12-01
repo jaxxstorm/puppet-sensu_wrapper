@@ -5,8 +5,6 @@ group :development do
   gem "beaker-rspec", ">= 5.1.0"
   gem "beaker-puppet_install_helper"
   gem "pry"
-  gem "puppet-blacksmith"
-  gem "serverspec"
   gem "vagrant-wrapper"
   gem "puppet-strings"
 end
@@ -28,4 +26,7 @@ group :test do
   gem "puppetlabs_spec_helper"
   gem "hiera"
   gem "hiera-puppet-helper"
+  gem "puppet-blacksmith"
+  gem "serverspec"
+  gem "net-ssh", "~> 2.9.0"
 end
