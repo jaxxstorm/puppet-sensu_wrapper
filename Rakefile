@@ -5,6 +5,7 @@ require 'puppet-syntax/tasks/puppet-syntax'
 begin
     require 'puppet_blacksmith/rake_tasks'
 rescue
+end
 
 exclude_paths = [
   "pkg/**/*",
