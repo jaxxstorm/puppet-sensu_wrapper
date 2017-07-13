@@ -1,7 +1,7 @@
 # Private params class
 class sensu_wrapper::params {
 
-  $version =  'v0.3'
+  $version =  'v0.3.2'
   $archive_path       = '/tmp/sensu-wrapper.tar.gz'
   $extract_path       = '/opt/sensu-wrapper'
   $bin_dir            = '/usr/local/bin'
