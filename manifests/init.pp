@@ -54,9 +54,8 @@ class sensu_wrapper (
   $real_download_url = pick($download_url, "${download_url_base}${version}/sensu-wrapper_linux_${os_arch}.tar.gz")
 
   anchor { 'sensu_wrapper_first': }
-  ->
-  class { 'sensu_wrapper::install': } ->
-  class { 'sensu_wrapper::config': } ->
-  anchor { 'sensu_wrapper_final': }
+  -> class { 'sensu_wrapper::install': }
+  -> class { 'sensu_wrapper::config': }
+  -> anchor { 'sensu_wrapper_final': }
 
 }
